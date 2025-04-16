@@ -14,7 +14,5 @@ CAMERA_SCREENSHOT_CODE = ["cameraScreenshot"]
 MEDIA_ID = "1"
 
 # 获取环境变量
-#APP_KEY = '67fcc47ee4b0ab0ae18029c1'
-#APP_SECRET = 'xShqoM-xR2n5uo0v5WKajRJQ4mLXEvtBQcbyclXxTM62F5QacpUqqRYcLSxZLJDU'
 APP_KEY = os.getenv("APP_KEY")
 APP_SECRET = os.getenv("APP_SECRET")

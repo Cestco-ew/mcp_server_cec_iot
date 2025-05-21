@@ -12,6 +12,3 @@ CAMERA_SCREENSHOT_CODE = ["cameraScreenshot"]
 
 # 流媒体id
 MEDIA_ID = "1"
-# 获取环境变量
-APP_KEY = os.getenv("APP_KEY")
-APP_SECRET = os.getenv("APP_SECRET")

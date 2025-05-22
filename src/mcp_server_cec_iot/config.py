@@ -1,7 +1,4 @@
 
-
-import os
-
 DOMAIN = "https://oapi.sh-cec.com/"
 AUTH = "auth/get_token"
 

@@ -3,7 +3,7 @@ from typing import Dict, Any, List, Optional
 
 import httpx
 
-from config import DOMAIN, AUTH
+from src.mcp_server_cec_iot.config import DOMAIN, AUTH
 
 
 logger = logging.getLogger("cec_iot_mcp_server_server_remote_api")

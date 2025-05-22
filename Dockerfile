@@ -1,6 +1,9 @@
 # 使用官方Python轻量级镜像
 FROM python:3.12-slim
 
+# 设置Python模块搜索路径
+ENV PYTHONPATH=/app
+
 # 设置工作目录
 WORKDIR /app
 
@@ -11,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt \
     --default-timeout=1000
 
 # 复制项目文件到容器中（确保Dockerfile放置在SRC目录下）
-COPY . .
+COPY ./src ./src
 
 # 暴露服务端口
 EXPOSE 8080

@@ -1,16 +1,16 @@
 import argparse
 import asyncio
 import json
+import os
 import secrets
 import string
 
-import click
 from mcp.server.fastmcp import FastMCP
 
 
 
-from config import *
-from remote_api import *
+from src.mcp_server_cec_iot.config import *
+from src.mcp_server_cec_iot.remote_api import *
 
 logger = logging.getLogger("cec_iot_mcp_server_server")
 

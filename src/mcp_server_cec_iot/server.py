@@ -237,10 +237,12 @@ async def serve(app_key: str,app_secret:str,**settings: Any) -> FastMCP:
 
 async def main():
     parser = argparse.ArgumentParser(description='Run MCP SSE-based server')
-    parser.add_argument('--host', default='0.0.0.0', help='Host to bind to')
-    parser.add_argument('--port', type=int, default=18080, help='Port to listen on')
-    parser.add_argument('--app_key', type=str, default='67fcc47ee4b0ab0ae18029c1', help='app_key to listen on')
-    parser.add_argument('--app_secret', type=str, default='Qjc0SZN4TSgN1FOATKaDBQ8DUQ0Rygev0UES6DXkRAY8Jycxxu5XSjHrjTP5Y5YS', help='app_secret to listen on')
+    parser.add_argument('--host', default=os.getenv('HOST', '0.0.0.0'))
+    parser.add_argument('--port', type=int, default=os.getenv('PORT', 18080))
+    parser.add_argument('--app_key', type=str, default=os.getenv('APP_KEY', '67fcc47ee4b0ab0ae18029c1'))
+    parser.add_argument('--app_secret', type=str,
+                        default=os.getenv('APP_SECRET', 'Qjc0SZN4TSgN1FOATKaDBQ8DUQ0Rygev0UES6DXkRAY8Jycxxu5XSjHrjTP5Y5YS'))
+
     args = parser.parse_args()
     mcp = await serve(app_key = args.app_key,app_secret = args.app_secret,host=args.host, port=args.port)
     await mcp.run_sse_async()

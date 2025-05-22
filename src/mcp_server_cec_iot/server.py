@@ -238,7 +238,7 @@ async def serve(app_key: str,app_secret:str,**settings: Any) -> FastMCP:
 async def main():
     parser = argparse.ArgumentParser(description='Run MCP SSE-based server')
     parser.add_argument('--host', default=os.getenv('HOST', '0.0.0.0'))
-    parser.add_argument('--port', type=int, default=os.getenv('PORT', 18080))
+    parser.add_argument('--port', type=int, default=os.getenv('PORT', 8080))
     parser.add_argument('--app_key', type=str, default=os.getenv('APP_KEY', '67fcc47ee4b0ab0ae18029c1'))
     parser.add_argument('--app_secret', type=str,
                         default=os.getenv('APP_SECRET', 'Qjc0SZN4TSgN1FOATKaDBQ8DUQ0Rygev0UES6DXkRAY8Jycxxu5XSjHrjTP5Y5YS'))

@@ -20,4 +20,4 @@ COPY ./src ./src
 EXPOSE 8080
 
 # 启动命令（允许通过docker run传递命令行参数）
-CMD ["python", "-m", "mcp_server_cec_iot.server"]
+CMD ["python", "-m", "src.mcp_server_cec_iot.server"]
